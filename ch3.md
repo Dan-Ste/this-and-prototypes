@@ -59,7 +59,7 @@ var newObj = JSON.parse( JSON.stringify( someObj ) );
 ```
 Но этот способ предпологает, что объект должен быть валиден для преобразования в JSON.
 
-Второй способ появился в ES6: 
+Второй способ появился в ES6 - `Object.assign(...)`. Он осуществляет поверхностную копию объекта с помощью оператора присваивания `=`
 
 ```
 var newObj = Object.assign( {}, myObject );
@@ -69,3 +69,4 @@ newObj.b === anotherObject;		// true
 newObj.c === anotherArray;		// true
 newObj.d === anotherFunction;	// true
 ```
+
